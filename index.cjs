@@ -30,11 +30,10 @@ async function processPythonScript() {
     python.stdin.end();
 
     // Receive data from python script
-    python.stdout.on("data", (tableData) => {
+    python.stdout.on("data", (urlData) => {
       try {
-        console.log(tableData.toString().replaceAll("'", '"'));
-        const tables = JSON.parse(tableData.toString().replaceAll("'", '"'));
-        resolve(tables);
+        const urls = JSON.parse(urlData.toString().replaceAll("'", '"'));
+        resolve(urls);
       } catch (error) {
         reject(new Error("Error parsing JSON: " + error));
       }
