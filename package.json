@@ -1,0 +1,16 @@
+{
+    "name": "ghost-to-medium-import",
+    "version": "1.0.0",
+    "description": "Node.js and Python script to import posts from Ghost to Medium.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Snehasish Nayak",
+    "license": "MIT",
+    "dependencies": {
+      "puppeteer": "^20.8.2"
+    }
+  }
+  
